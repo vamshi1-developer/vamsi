@@ -19,7 +19,7 @@ class UserController extends Controller
     public function getAction()
     {
 
-        echo "hi";
+
         $restresult = $this->getDoctrine()->getRepository('AppBundle:User')->findAll();
         if ($restresult === null) {
             return new View("there are no users exist", Response::HTTP_NOT_FOUND);
@@ -105,6 +105,11 @@ class UserController extends Controller
         return new View("deleted successfully", Response::HTTP_OK);
     }
 }
+
+
+
+//echo $vam = 'here is something I have written ' . $kri . ' and there you go';
+
 
  ?>
 
